@@ -1,0 +1,201 @@
+body {
+  color: white;
+  font-family: Arial, sans-serif;
+  background-color: #1f1b24;
+  margin: 0;
+  
+  .chatPage {
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+
+    .chat-container {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+      max-height: 100%;
+    }
+
+    .nav {
+      display: flex;
+      width: 236px;
+      height: 100vh;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      background-color: #1E1E2F;
+      box-sizing: border-box;
+
+      .header-title {
+        display: flex;  
+        padding: 10px 17px;
+        justify-content: center;
+        align-items: center;
+
+        .header-title-text {
+          color: #FFF;
+          font-size: 25px;
+          font-weight: 400;
+        }
+
+        &.logo-icon {
+          &::before {
+            content: "";
+            display: flex;
+            width: 41px;
+            height: 41px;
+            background: url("/Mail_icon.svg");
+          }
+
+          &::after {
+            content: "";
+            display: flex;
+            width: 24px;
+            height: 24px;
+            background: url("/menu_icon.svg");
+          }
+        }
+      }
+
+      .header-options {
+        display: flex;
+        height: 600px;
+        padding: 32px 17px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        flex-grow: 1;
+
+        .header-options-inner {
+          display: flex;
+          width: 12.625rem;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          .header-options-item {
+            display: flex;
+            height: 2rem;
+            padding: 0.25rem 0.5rem;
+            align-items: center;
+            gap: 0.25rem;
+            cursor: pointer;
+            border-radius: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+
+            &:hover {
+              background: #30304B;
+            }
+
+            &::before {
+              content: "";
+              display: flex;
+              width: 30px;
+              height: 30px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+            }
+
+            &.ephemer-mail-icon::before {
+              background-image: url("/inbox_icon.svg");
+            }
+
+            &.chat-icon::before {
+              background-image: url("/chat_icon.svg");
+            }
+
+            &.settings-icon::before {
+              background-image: url("/settings_icon.svg");
+            }
+          }
+        }
+      }
+
+      .header-profile {
+        display: flex;
+        height: 62px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+        border-top: 1px solid #58586C;
+
+        &::before {
+          content: "";
+          display: flex;
+          width: 30px;
+          height: 30px;
+          background: url("/user_icon.svg");
+          
+        }
+      }
+    }
+
+    .user-list {
+      display: flex;
+      width: 223px;
+      height: 100vh;
+      flex-direction: column;
+      align-items: flex-start;
+      background: #2A2A40;
+      border-right: 1px solid #58586C;
+
+      .user-list-header {
+        display: flex;
+        width: 100%;
+        padding: 14px 21px;
+        flex-direction: column;
+        gap: 10px;
+
+        .user-list-search {
+          .user-list-search-box {
+            position: relative;
+            display: flex;
+            width: 181px;
+            height: 27px;
+            padding: 4px 12px 4px 32px;
+            align-items: center;
+            color: white;
+            border-radius: 4px;
+            background: #1C1C1C;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            outline: none;
+            border: none;
+
+            &::before {
+              content: "";
+              position: absolute;
+              left: 10px;
+              width: 14px;
+              height: 14px;
+              background: url("/lupa.svg");
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+
+      .user-list-inner {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 33px;
+        gap: 9px;
+        flex: 1;
+        overflow: auto;
+      }
+    }
+
+    .chat {
+      display: flex;
+      flex: 1;
+      background: #ffffff;
+
+      .chat-inner {
+        flex: 1;
+        padding: 16px;
+        overflow: auto;
+      }
+    }
+  }
+}
